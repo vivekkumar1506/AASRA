@@ -1,0 +1,17 @@
+{
+  "name": "aasra-adoption-platform",
+  "version": "1.0.0",
+  "description": "Aasra — Adoption Guidance & Child Care Discovery Platform",
+  "scripts": {
+    "start": "python -m http.server 5500 --bind 127.0.0.1",
+    "dev": "python -m http.server 5500 --bind 127.0.0.1",
+    "serve": "python -m http.server 5500 --bind 127.0.0.1"
+  },
+  "keywords": [
+    "adoption",
+    "cara",
+    "child-welfare"
+  ],
+  "author": "",
+  "license": "ISC"
+}

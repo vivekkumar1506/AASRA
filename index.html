@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aasra — Adoption Guidance & Child Care Discovery Platform</title>
+  <meta name="description"
+    content="Aasra is a compassionate, transparent platform guiding prospective adoptive parents through legal child adoption, eligibility checking, child care discovery, and document readiness.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/design-tokens.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+
+  <!-- =========================================
+       STICKY NAVBAR
+       ========================================= -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" id="brand-home-link">
+        <div class="brand-icon">
+          <!-- Heart in Hands / Haven Icon -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+            </path>
+          </svg>
+        </div>
+        <div>
+          <span>Aasra</span>
+          <span class="brand-tagline">Adoption Guidance & Care</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#eligibility" class="nav-link">Eligibility</a></li>
+          <li><a href="#roadmap" class="nav-link">Process Roadmap</a></li>
+          <li><a href="#discovery" class="nav-link">Child Discovery</a></li>
+          <li><a href="#vault" class="nav-link">Document Vault</a></li>
+          <li><a href="#costs" class="nav-link">Fee Transparency</a></li>
+          <li><a href="#agencies" class="nav-link">Agencies</a></li>
+          <li><a href="#counseling" class="nav-link">Counseling</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Live Application Tracker Button -->
+        <button class="nav-track-btn" id="nav-track-btn" onclick="window.openTrackerModal()" title="Track live status of your booked agency appointments">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span>Track Application</span>
+        </button>
+
+        <!-- User Profile / Sign In Status -->
+        <div id="nav-user-container"></div>
+
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Theme">
+          <span id="theme-toggle-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+        </button>
+
+        <button class="btn btn-primary" id="nav-book-consult-btn"
+          onclick="window.openCounselingModal('General Adoption Consultation')">
+          Book Guidance
+        </button>
+
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Open Navigation Menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================
+       HERO SECTION
+       ========================================= -->
+  <section class="hero-section" id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-glow-2"></div>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge-pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+            </path>
+          </svg>
+          Official Adoption Guidance & Ethical Haven
+        </div>
+
+        <h1 class="hero-title">
+          Every Child Deserves a <span class="highlight">Loving Home</span>. Every Parent Deserves Clear Guidance.
+        </h1>
+
+        <p class="hero-subtitle">
+          Navigating child adoption should be rooted in compassion, clarity, and legal certainty. Aasra empowers
+          prospective parents with interactive eligibility checking, step-by-step statutory roadmaps, document
+          preparation, and verified support.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#eligibility" class="btn btn-primary">
+            <span>Check Your Eligibility</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#discovery" class="btn btn-secondary">
+            <span>Explore Child Care Needs</span>
+          </a>
+          <button class="btn btn-secondary" onclick="window.openTrackerModal()" style="display:inline-flex; align-items:center; gap:6px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>Track Application</span>
+          </button>
+        </div>
+
+        <div class="hero-stats-row">
+          <div class="hero-stat-item">
+            <h3>4,800<span>+</span></h3>
+            <p>Families United with Love</p>
+          </div>
+          <div class="hero-stat-item">
+            <h3>420<span>+</span></h3>
+            <p>Verified SAAs & CWCs Listed</p>
+          </div>
+          <div class="hero-stat-item">
+            <h3>100<span>%</span></h3>
+            <p>Legal & CARA Compliant</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="hero-image-frame">
+          <img src="assets/images/hero-family.jpg" alt="Loving parents hugging their adopted child in a warm home"
+            loading="eager">
+        </div>
+        <div class="hero-floating-card">
+          <div class="floating-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div class="floating-text">
+            <h4>100% Ethical & Legal</h4>
+            <p>Child rights and welfare prioritized above all</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       SECTION 1: ELIGIBILITY CHECKER
+       ========================================= -->
+  <section class="section-padding section-bg-muted" id="eligibility">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Step 1 • Self-Assessment</span>
+        <h2 class="section-title">Interactive Adoption Eligibility Calculator</h2>
+        <p class="section-subtitle">
+          Evaluate your legal eligibility based on Indian CARA regulations and international child protection standards.
+          Receive an instant readiness scorecard and customized recommendations.
+        </p>
+      </div>
+
+      <div class="eligibility-container">
+        <!-- Wizard Stepper Header -->
+        <div class="wizard-stepper">
+          <div class="step-item active" data-step-indicator="1">
+            <div class="step-circle">1</div>
+            <div>
+              <div style="font-size:0.75rem; text-transform:uppercase;">Step 1</div>
+              <div>Parent Status</div>
+            </div>
+          </div>
+          <div class="step-item" data-step-indicator="2">
+            <div class="step-circle">2</div>
+            <div>
+              <div style="font-size:0.75rem; text-transform:uppercase;">Step 2</div>
+              <div>Age & Composite Limits</div>
+            </div>
+          </div>
+          <div class="step-item" data-step-indicator="3">
+            <div class="step-circle">3</div>
+            <div>
+              <div style="font-size:0.75rem; text-transform:uppercase;">Step 3</div>
+              <div>Health & Readiness</div>
+            </div>
+          </div>
+          <div class="step-item" data-step-indicator="4">
+            <div class="step-circle">4</div>
+            <div>
+              <div style="font-size:0.75rem; text-transform:uppercase;">Step 4</div>
+              <div>Readiness Report</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wizard Body -->
+        <div class="wizard-body">
+          <!-- Step 1: Parent Status -->
+          <div class="wizard-step-content active" id="wizard-step-1">
+            <h3 class="step-question-title">What is your prospective parent family structure?</h3>
+            <p class="step-question-desc">Select your current family profile. Statutory rules differ for married couples
+              and single parents.</p>
+
+            <div class="option-cards-grid">
+              <div class="option-card parent-option-card selected" data-value="couple">
+                <div class="option-card-header">
+                  <div class="option-card-icon">👫</div>
+                  <span class="option-badge">Both Parents</span>
+                </div>
+                <h4>Married Couple</h4>
+                <p>Both spouses must give consent. Requires a minimum of 2 years of stable marital relationship.</p>
+              </div>
+
+              <div class="option-card parent-option-card" data-value="single_female">
+                <div class="option-card-header">
+                  <div class="option-card-icon">👩</div>
+                  <span class="option-badge">Single Parent</span>
+                </div>
+                <h4>Single Female</h4>
+                <p>Eligible to adopt a child of any gender (boy or girl) subject to age and financial suitability.</p>
+              </div>
+
+              <div class="option-card parent-option-card" data-value="single_male">
+                <div class="option-card-header">
+                  <div class="option-card-icon">👨</div>
+                  <span class="option-badge">Single Parent</span>
+                </div>
+                <h4>Single Male</h4>
+                <p>Eligible under CARA Section 5(2) to adopt a male child only, with requisite financial stability.</p>
+              </div>
+            </div>
+
+            <div class="wizard-footer">
+              <div></div>
+              <button class="btn btn-primary" data-wizard-next>
+                <span>Continue to Age Verification</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Age Verification -->
+          <div class="wizard-step-content" id="wizard-step-2">
+            <h3 class="step-question-title">Age and Composite Age Calculation</h3>
+            <p class="step-question-desc">Statutory criteria mandate maximum composite age thresholds based on the
+              desired child age category.</p>
+
+            <div class="age-controls-grid">
+              <!-- Primary Parent Age -->
+              <div class="form-group">
+                <label for="primary-age-slider">Primary Parent Age:</label>
+                <div class="range-wrap">
+                  <input type="range" id="primary-age-slider" class="range-input" min="25" max="58" value="32">
+                  <span class="range-val-badge" id="primary-age-val">32 yrs</span>
+                </div>
+              </div>
+
+              <!-- Spouse Age (conditional) -->
+              <div class="form-group" id="spouse-age-group">
+                <label for="spouse-age-slider">Spouse Age:</label>
+                <div class="range-wrap">
+                  <input type="range" id="spouse-age-slider" class="range-input" min="25" max="58" value="34">
+                  <span class="range-val-badge" id="spouse-age-val">34 yrs</span>
+                </div>
+              </div>
+
+              <!-- Marriage Stability -->
+              <div class="form-group" id="marriage-years-group">
+                <label for="marriage-slider">Years of Marriage:</label>
+                <div class="range-wrap">
+                  <input type="range" id="marriage-slider" class="range-input" min="0" max="25" value="4">
+                  <span class="range-val-badge" id="marriage-val">4 yrs</span>
+                </div>
+              </div>
+
+              <!-- Child Age Category Preference -->
+              <div class="form-group">
+                <label for="child-age-select">Preferred Child Age Group:</label>
+                <select id="child-age-select"
+                  style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+                  <option value="0-2">Infant (Up to 2 years) — Max Composite Age 85</option>
+                  <option value="2-4">Toddler (2 to 4 years) — Max Composite Age 90</option>
+                  <option value="4-8">Young Child (4 to 8 years) — Max Composite Age 100</option>
+                  <option value="8+">Older Child (8 to 18 years) — Max Composite Age 110</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Composite Age Box -->
+            <div class="composite-age-box" id="composite-age-box">
+              <div>
+                <strong style="color:var(--trust-navy); font-size:1.05rem;">Combined Composite Age:</strong>
+                <span id="composite-age-val"
+                  style="font-weight:800; font-size:1.3rem; margin-left:0.5rem; color:var(--primary-terracotta);">66
+                  yrs</span>
+              </div>
+              <span class="option-badge" id="composite-status-badge">Within limit (Max 85 yrs)</span>
+            </div>
+
+            <div class="wizard-footer">
+              <button class="btn btn-secondary" data-wizard-prev>Back</button>
+              <button class="btn btn-primary" data-wizard-next>
+                <span>Continue to Health & Stability</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3: Health & Readiness Check -->
+          <div class="wizard-step-content" id="wizard-step-3">
+            <h3 class="step-question-title">Health, Financial & Domestic Readiness</h3>
+            <p class="step-question-desc">Select all criteria that your household currently fulfills. These are verified
+              during the Home Study Report (HSR).</p>
+
+            <div class="checklist-grid">
+              <label class="check-item-card">
+                <input type="checkbox" id="check-health" checked>
+                <div class="check-text">
+                  <h5>Medical Fitness Certificate</h5>
+                  <p>Physically, mentally, and emotionally stable; free from life-threatening contagious or terminal
+                    illness.</p>
+                </div>
+              </label>
+
+              <label class="check-item-card">
+                <input type="checkbox" id="check-finance" checked>
+                <div class="check-text">
+                  <h5>Documented Financial Stability</h5>
+                  <p>Steady verifiable income with past 3 years of Income Tax Returns (ITR) or Form 16.</p>
+                </div>
+              </label>
+
+              <label class="check-item-card">
+                <input type="checkbox" id="check-record" checked>
+                <div class="check-text">
+                  <h5>Clean Police & Background Record</h5>
+                  <p>No criminal record or history of child abuse, violence, or moral turpitude.</p>
+                </div>
+              </label>
+
+              <label class="check-item-card">
+                <input type="checkbox" id="check-home" checked>
+                <div class="check-text">
+                  <h5>Child-Safe Home Environment</h5>
+                  <p>Adequate space, sanitary living conditions, and loving support network to nurture a child.</p>
+                </div>
+              </label>
+            </div>
+
+            <div class="wizard-footer">
+              <button class="btn btn-secondary" data-wizard-prev>Back</button>
+              <button class="btn btn-primary" data-wizard-next>
+                <span>Calculate My Readiness</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 4: Results & Scorecard -->
+          <div class="wizard-step-content" id="wizard-step-4">
+            <div class="eligibility-results-card">
+              <div class="results-gauge-wrapper">
+                <svg class="gauge-svg" width="130" height="130" viewBox="0 0 130 130">
+                  <circle class="gauge-bg" cx="65" cy="65" r="55"></circle>
+                  <circle class="gauge-progress" id="gauge-progress-circle" cx="65" cy="65" r="55"></circle>
+                </svg>
+                <div class="gauge-score-text" id="results-score-value">95%</div>
+              </div>
+
+              <div id="results-status-badge" class="eligibility-status-badge status-eligible">
+                Ready for CARA Registration
+              </div>
+
+              <h4 style="font-size:1.35rem; color:var(--trust-navy); margin-bottom:0.5rem;">Your Adoption Readiness
+                Evaluation</h4>
+              <p style="font-size:0.95rem; color:var(--slate-medium); max-width:600px; margin:0 auto 1.5rem;">
+                Based on your inputs, your household meets key legal qualifications. Below are tailored next steps to
+                assemble your dossier.
+              </p>
+
+              <div class="results-recommendations-list" id="results-recommendations-container">
+                <!-- Populated dynamically via JS -->
+              </div>
+
+              <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin-top:2rem;">
+                <button class="btn btn-secondary" id="restart-wizard-btn">Recalculate</button>
+                <button class="btn btn-secondary" id="print-eligibility-btn">Print / Save Report</button>
+                <a href="#vault" class="btn btn-primary">Proceed to Document Vault</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       SECTION 2: LEGAL ADOPTION ROADMAP
+       ========================================= -->
+  <section class="section-padding" id="roadmap">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Step 2 • The Legal Journey</span>
+        <h2 class="section-title">Step-by-Step Legal Process Roadmap</h2>
+        <p class="section-subtitle">
+          Child adoption is a transparent, legally protected process in India governed by the Juvenile Justice (Care and
+          Protection of Children) Act and CARA Regulations. Click any milestone to view requirements and tips.
+        </p>
+      </div>
+
+      <!-- Roadmap Nav Steps -->
+      <div class="roadmap-timeline-nav" id="roadmap-nav-container">
+        <!-- Rendered via process-roadmap.js -->
+      </div>
+
+      <!-- Detail Panel -->
+      <div class="roadmap-detail-panel" id="roadmap-detail-panel">
+        <!-- Rendered via process-roadmap.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       SECTION 3: ETHICAL CHILD DISCOVERY
+       ========================================= -->
+  <section class="section-padding section-bg-muted" id="discovery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Step 3 • Ethical Child Care Discovery</span>
+        <h2 class="section-title">Understanding Child Categories & Care Needs</h2>
+        <p class="section-subtitle">
+          Adoption is about finding a family for a child, not a child for a family. Explore developmental stages,
+          bonding preparation, sibling considerations, and specialized medical care.
+        </p>
+      </div>
+
+      <!-- Discovery Banner -->
+      <div class="discovery-banner-card">
+        <div class="discovery-banner-content">
+          <span
+            style="font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--accent-amber); display:block; margin-bottom:0.6rem;">
+            Ethical Child Discovery
+          </span>
+          <h3>Every Child Has Unique Emotional & Healthcare Needs</h3>
+          <p>
+            Whether welcoming an infant, opening your heart to older children, embracing biological siblings together,
+            or supporting special developmental needs, thorough emotional and medical preparation creates lifelong
+            attachment.
+          </p>
+          <a href="#counseling" class="btn btn-primary"
+            style="background:#fff; color:var(--trust-navy); box-shadow:none;">
+            Talk to an Adoption Counselor
+          </a>
+        </div>
+        <div class="discovery-banner-img">
+          <img src="assets/images/child-care-discovery.jpg" alt="Happy children reading and playing together"
+            loading="lazy">
+        </div>
+      </div>
+
+      <!-- Filter Pills -->
+      <div class="filter-pills-bar">
+        <button class="filter-pill active" data-filter="all">All Care Profiles</button>
+        <button class="filter-pill" data-filter="infant">Infants (0–2y)</button>
+        <button class="filter-pill" data-filter="toddler">Toddlers (2–4y)</button>
+        <button class="filter-pill" data-filter="child">Young Children (4–8y)</button>
+        <button class="filter-pill" data-filter="older">Older Children (8+y)</button>
+        <button class="filter-pill" data-filter="siblings">Sibling Groups</button>
+        <button class="filter-pill" data-filter="special">Special Needs</button>
+      </div>
+
+      <!-- Profiles Grid -->
+      <div class="profiles-grid" id="discovery-profiles-grid">
+        <!-- Rendered dynamically by discovery-explorer.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       SECTION 4: DOCUMENT READINESS VAULT
+       ========================================= -->
+  <section class="section-padding" id="vault">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Step 4 • Paperwork Preparation</span>
+        <h2 class="section-title">Interactive Document Readiness Vault</h2>
+        <p class="section-subtitle">
+          Over 60% of adoption delays stem from incomplete or misformatted documentation. Track your essential dossier
+          in real-time. Changes are securely saved to your local browser.
+        </p>
+      </div>
+
+      <div class="vault-container">
+        <!-- Progress Bar Card -->
+        <div class="vault-progress-card">
+          <div class="vault-stats">
+            <h3 id="vault-percent-text">30% Ready</h3>
+            <p id="vault-count-badge">3 of 10 Completed</p>
+          </div>
+          <div class="vault-bar-wrapper">
+            <div class="bar-labels">
+              <span>Dossier Completion</span>
+              <span>CARA Home Study Threshold: 100%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" id="vault-progress-fill" style="width: 30%;"></div>
+            </div>
+          </div>
+          <button class="btn btn-secondary" id="download-vault-btn">
+            Print Checklist Summary
+          </button>
+        </div>
+
+        <!-- Filter & Toolbar -->
+        <div class="vault-toolbar">
+          <div class="vault-tabs">
+            <button class="vault-tab active" data-cat="all">All Documents</button>
+            <button class="vault-tab" data-cat="identity">Identity & Civil</button>
+            <button class="vault-tab" data-cat="family">Family & Marriage</button>
+            <button class="vault-tab" data-cat="financial">Financial & ITR</button>
+            <button class="vault-tab" data-cat="medical">Medical Health</button>
+            <button class="vault-tab" data-cat="legal">Police & Character</button>
+          </div>
+        </div>
+
+        <!-- Document List -->
+        <div class="doc-items-list" id="doc-items-list">
+          <!-- Rendered dynamically by document-vault.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       SECTION 5: FEE TRANSPARENCY
+       ========================================= -->
+  <section class="section-padding section-bg-muted" id="costs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Transparency • Zero Corruption</span>
+        <h2 class="section-title">Statutory Adoption Fee & Cost Transparency</h2>
+        <p class="section-subtitle">
+          Adoption in India is heavily regulated by law. Official statutory costs are legally capped under CARA Schedule
+          XIII to prevent child trafficking and corruption.
+        </p>
+      </div>
+
+      <div class="cost-estimator-card">
+        <div class="cost-toggle-switch">
+          <button class="cost-toggle-btn active" id="cost-btn-domestic">Domestic In-Country PAPs</button>
+          <button class="cost-toggle-btn" id="cost-btn-nri">NRI / Overseas Applicants</button>
+        </div>
+
+        <table class="cost-table">
+          <thead>
+            <tr>
+              <th>Statutory Fee Item</th>
+              <th>Authority / Recipient</th>
+              <th>Government Capped Fee</th>
+            </tr>
+          </thead>
+          <tbody id="cost-table-body">
+            <!-- Rendered by cost-calculator.js -->
+          </tbody>
+          <tfoot>
+            <tr class="total-row">
+              <td colspan="2">Total Regulated Statutory Cost:</td>
+              <td id="cost-total-amount">₹65,000</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <div class="anti-corruption-banner">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--eucalyptus-teal)" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <div>
+            <strong style="color:var(--trust-navy); display:block; margin-bottom:2px;">Zero Tolerance to Middlemen &
+              Unofficial Fees</strong>
+            <p id="cost-schedule-note" style="font-size:0.85rem; color:var(--slate-medium);">
+              Demanding donations, expedited fees, or broker commissions is a non-bailable criminal offense under
+              Section 80 of the Juvenile Justice Act 2015.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       SECTION 6: AGENCY DIRECTORY
+       ========================================= -->
+  <section class="section-padding" id="agencies">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Directory • Authorized Institutions</span>
+        <h2 class="section-title">Verified Adoption Agencies (SAAs & CWCs)</h2>
+        <p class="section-subtitle">
+          Locate licensed Specialized Adoption Agencies (SAAs) and State Adoption Resource Agencies (SARAs) in your
+          district.
+        </p>
+      </div>
+
+      <div class="agency-controls-bar">
+        <div class="search-input-wrap">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="agency-search-input" placeholder="Search by agency name, district, or specialty...">
+        </div>
+
+        <select class="state-select" id="agency-state-select">
+          <option value="all">All States & UTs</option>
+          <option value="Delhi">Delhi NCR</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          <option value="West Bengal">West Bengal</option>
+          <option value="Telangana">Telangana</option>
+          <option value="Rajasthan">Rajasthan</option>
+          <option value="Gujarat">Gujarat</option>
+          <option value="Kerala">Kerala</option>
+        </select>
+
+        <!-- Geolocation Permission & Nearby Trigger -->
+        <button class="agency-loc-action-btn" id="agency-location-btn" title="Detect device location to rank closest agencies first">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Find Agencies Near Me</span>
+        </button>
+      </div>
+
+      <!-- Proximity Status Banner -->
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:1rem;">
+        <div class="location-status-badge" id="location-status-badge"></div>
+        <button id="reset-location-btn" class="btn btn-secondary btn-sm" style="display:none; padding:4px 12px; font-size:0.75rem;">
+          Clear Location Filter
+        </button>
+      </div>
+
+      <div class="agencies-grid" id="agencies-grid-container">
+        <!-- Rendered by agency-directory.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       SECTION 7: EMOTIONAL COUNSELING & STORIES
+       ========================================= -->
+  <section class="section-padding section-bg-muted" id="counseling">
+    <div class="container counseling-grid">
+      <div>
+        <span class="section-badge">Emotional Support • Mentorship</span>
+        <h2 class="section-title" style="text-align:left; margin-bottom:1rem;">
+          You Don't Have to Walk This Journey Alone
+        </h2>
+        <p class="hero-subtitle" style="text-align:left; max-width:none;">
+          Adoption is as much an emotional transformation as a legal process. Our certified counselors and experienced
+          adoptive parent mentors offer non-judgmental guidance, paperwork support, and heartfelt encouragement.
+        </p>
+
+        <ul class="counseling-features">
+          <li class="counseling-feature-item">
+            <div class="feature-icon-circle">🌱</div>
+            <div>
+              <h5>Pre-Adoption Psychological Readiness</h5>
+              <p>Work through doubts, grief, biological infertility healing, and family discussions before applying.</p>
+            </div>
+          </li>
+          <li class="counseling-feature-item">
+            <div class="feature-icon-circle">📋</div>
+            <div>
+              <h5>Home Study & Interview Preparation</h5>
+              <p>Learn what social workers evaluate during home visits and how to present your genuine parenting vision.
+              </p>
+            </div>
+          </li>
+          <li class="counseling-feature-item">
+            <div class="feature-icon-circle">🤝</div>
+            <div>
+              <h5>Peer Mentorship Circles</h5>
+              <p>Connect with adoptive mothers, fathers, and single parents who have successfully navigated CARINGS.</p>
+            </div>
+          </li>
+        </ul>
+
+        <button class="btn btn-primary" onclick="window.openCounselingModal('General Adoption Consultation')">
+          Schedule Free Confidential Session
+        </button>
+      </div>
+
+      <div class="counseling-image-frame">
+        <img src="assets/images/counseling-support.jpg" alt="Prospective parents speaking with adoption counselor"
+          loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       SECTION 8: FAQ ACCORDION
+       ========================================= -->
+  <section class="section-padding" id="faq">
+    <div class="container" style="max-width: 860px;">
+      <div class="section-header">
+        <span class="section-badge">Knowledge Hub • Clear Answers</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Common queries prospective parents have regarding regulations, timelines, eligibility, and legal rights.
+        </p>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-accordion-item card-glass" style="margin-bottom:1rem; padding:1.25rem 1.5rem; cursor:pointer;">
+          <div class="faq-header" style="display:flex; justify-content:space-between; align-items:center;">
+            <h4 style="font-size:1.05rem; font-weight:700; color:var(--trust-navy);">How long does it typically take to
+              adopt a child in India?</h4>
+            <span style="font-size:1.4rem; color:var(--primary-terracotta);">+</span>
+          </div>
+          <div class="faq-body"
+            style="margin-top:0.75rem; font-size:0.92rem; color:var(--slate-medium); line-height:1.6;">
+            The timeline varies by child age category. For infants (0–2 years), the domestic queue on CARINGS averages
+            2.5 to 3.5 years due to high applicant volume. For young children (4–8 years), older children (8+ years),
+            sibling groups, or children with medical needs, matching takes only 6 to 18 months, with priority placement
+            options available.
+          </div>
+        </div>
+
+        <div class="faq-accordion-item card-glass" style="margin-bottom:1rem; padding:1.25rem 1.5rem; cursor:pointer;">
+          <div class="faq-header" style="display:flex; justify-content:space-between; align-items:center;">
+            <h4 style="font-size:1.05rem; font-weight:700; color:var(--trust-navy);">Can a single individual legally
+              adopt a child?</h4>
+            <span style="font-size:1.4rem; color:var(--primary-terracotta);">+</span>
+          </div>
+          <div class="faq-body"
+            style="margin-top:0.75rem; font-size:0.92rem; color:var(--slate-medium); line-height:1.6;">
+            Yes! Under Indian law (CARA Regulations Section 5), a single female can adopt a child of any gender (boy or
+            girl). A single male is eligible to adopt only a male child. Single prospective adoptive parents must be at
+            least 25 years old.
+          </div>
+        </div>
+
+        <div class="faq-accordion-item card-glass" style="margin-bottom:1rem; padding:1.25rem 1.5rem; cursor:pointer;">
+          <div class="faq-header" style="display:flex; justify-content:space-between; align-items:center;">
+            <h4 style="font-size:1.05rem; font-weight:700; color:var(--trust-navy);">What happens during the Home Study
+              Report (HSR)?</h4>
+            <span style="font-size:1.4rem; color:var(--primary-terracotta);">+</span>
+          </div>
+          <div class="faq-body"
+            style="margin-top:0.75rem; font-size:0.92rem; color:var(--slate-medium); line-height:1.6;">
+            A qualified social worker from your assigned local Specialized Adoption Agency visits your residence. The
+            visit is not a check for luxury or opulence; it evaluates your living environment's safety, family hygiene,
+            stability, and emotional alignment with raising an adopted child. The completed HSR is valid for 3 years.
+          </div>
+        </div>
+
+        <div class="faq-accordion-item card-glass" style="margin-bottom:1rem; padding:1.25rem 1.5rem; cursor:pointer;">
+          <div class="faq-header" style="display:flex; justify-content:space-between; align-items:center;">
+            <h4 style="font-size:1.05rem; font-weight:700; color:var(--trust-navy);">How is the child legally declared
+              ours?</h4>
+            <span style="font-size:1.4rem; color:var(--primary-terracotta);">+</span>
+          </div>
+          <div class="faq-body"
+            style="margin-top:0.75rem; font-size:0.92rem; color:var(--slate-medium); line-height:1.6;">
+            Following the Pre-Adoption Foster Care agreement, the adoption agency files a petition before the District
+            Magistrate (DM) under the Juvenile Justice Act. The DM passes a final, irrevocable Adoption Order, following
+            which the local municipal registrar issues a fresh Birth Certificate with the adoptive parents registered as
+            mother and father.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       FOOTER
+       ========================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>
+            <div class="brand-icon" style="width:34px; height:34px; font-size:0.9rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path
+                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                </path>
+              </svg>
+            </div>
+            Aasra Platform
+          </h3>
+          <p>
+            Aasra (आसरा) is dedicated to guiding families and safeguarding children through legal, transparent, and
+            ethical adoption pathways across India.
+          </p>
+          <div style="font-size:0.85rem; color:#8598aa;">
+            An independent educational guidance initiative supporting prospective parents through CARA, SARA, and Hague
+            Convention standards.
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#eligibility">Eligibility Quiz</a></li>
+            <li><a href="#roadmap">Legal Process Roadmap</a></li>
+            <li><a href="#discovery">Child Care Profiles</a></li>
+            <li><a href="#vault">Document Readiness</a></li>
+            <li><a href="#costs">Statutory Fees</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Official Portals</h4>
+          <ul class="footer-links">
+            <li><a href="https://cara.wcd.gov.in" target="_blank" rel="noopener">CARA Official (CARINGS)</a></li>
+            <li><a href="https://wcd.nic.in" target="_blank" rel="noopener">Ministry of WCD</a></li>
+            <li><a href="https://ncpcr.gov.in" target="_blank" rel="noopener">National Child Rights (NCPCR)</a></li>
+            <li><a href="https://www.hcch.net" target="_blank" rel="noopener">Hague Adoption Convention</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>National Child Helplines</h4>
+          <div class="helpline-box">
+            <div class="helpline-item">
+              <div class="helpline-icon">📞</div>
+              <div class="helpline-info">
+                <h5>Childline (24x7 Emergency)</h5>
+                <span>1098</span>
+              </div>
+            </div>
+            <div class="helpline-item">
+              <div class="helpline-icon">🏛️</div>
+              <div class="helpline-info">
+                <h5>CARA Toll Free Support</h5>
+                <span>1800-11-1311</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Aasra Adoption Guidance & Child Care Discovery Platform. Built for ethical child welfare.
+          <p class="legal-notice">
+            Disclaimer: Aasra is an informative guidance and preparation portal. All legal adoptions must be formally
+            registered and processed solely through the Central Adoption Resource Authority (CARA) at cara.wcd.gov.in.
+            Aasra does not charge adoption matching fees.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================
+       MODAL 1: CARE GUIDE DETAIL MODAL
+       ========================================= -->
+  <div class="modal-overlay" id="care-guide-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="care-modal-title">Care & Readiness Guide</h3>
+        <button class="modal-close-btn" onclick="window.closeModals()">✕</button>
+      </div>
+      <div class="modal-body" id="care-modal-body">
+        <!-- Injected via discovery-explorer.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================
+       MODAL 2: COUNSELING BOOKING MODAL
+       ========================================= -->
+  <div class="modal-overlay" id="counseling-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Schedule Confidential Consultation</h3>
+        <button class="modal-close-btn" onclick="window.closeModals()">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:0.9rem; color:var(--slate-medium); margin-bottom:1.5rem;">
+          Connect with a certified adoption counselor or experienced parent mentor. Consultations are strictly
+          confidential and free of cost.
+        </p>
+
+        <form id="counseling-booking-form">
+          <div class="form-group">
+            <label for="counseling-name">Your Full Name *</label>
+            <input type="text" id="counseling-name" required placeholder="e.g. Priya & Rahul Sharma"
+              style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+          </div>
+
+          <div class="form-group">
+            <label for="counseling-phone">Phone Number (WhatsApp enabled) *</label>
+            <input type="tel" id="counseling-phone" required placeholder="e.g. 9876543210"
+              style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+          </div>
+
+          <div class="form-group">
+            <label for="counseling-email">Email Address</label>
+            <input type="email" id="counseling-email" placeholder="name@example.com"
+              style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+          </div>
+
+          <div class="form-group">
+            <label for="counseling-topic-input">Consultation Focus / Topic</label>
+            <input type="text" id="counseling-topic-input" value="General Adoption Guidance"
+              style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="counseling-mode">Preferred Mode</label>
+              <select id="counseling-mode"
+                style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+                <option value="Google Meet Video Call">Online Video Call</option>
+                <option value="Phone Call">Phone Call</option>
+                <option value="In-Person at Partner Center">In-Person Counseling</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="counseling-time">Preferred Time Slot</label>
+              <select id="counseling-time"
+                style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+                <option value="Morning (10 AM - 1 PM)">Morning (10 AM – 1 PM)</option>
+                <option value="Afternoon (2 PM - 5 PM)">Afternoon (2 PM – 5 PM)</option>
+                <option value="Evening (6 PM - 8 PM)">Evening (6 PM – 8 PM)</option>
+                <option value="Weekend Special">Weekend Saturday/Sunday</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;">
+            Confirm Consultation Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================
+       MODAL 3: ONBOARDING / LOGIN GATEWAY MODAL
+       ========================================= -->
+  <div class="modal-overlay" id="auth-gateway-modal">
+    <div class="modal-content auth-gateway-card">
+      <div class="modal-header">
+        <div>
+          <div class="auth-header-badge">
+            <span>✨ Welcome to Aasra</span>
+          </div>
+          <h3 style="margin-top:2px;">Sign In or Continue as Guest</h3>
+        </div>
+        <button class="modal-close-btn" onclick="window.closeAuthGateway()">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:0.9rem; color:var(--slate-medium); margin-bottom:1.5rem; line-height:1.5;">
+          Sign in to automatically save your eligibility scorecards, document checklists, and scheduled agency visits. Or skip to explore anonymously.
+        </p>
+
+        <form id="auth-gateway-form">
+          <div class="form-group">
+            <label for="auth-name">Parent / Applicant Name *</label>
+            <input type="text" id="auth-name" required placeholder="e.g. Ananya & Siddharth Sen"
+              style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+            <div class="form-group">
+              <label for="auth-phone">Mobile / WhatsApp Number</label>
+              <input type="tel" id="auth-phone" placeholder="e.g. 9876543210"
+                style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+            </div>
+
+            <div class="form-group">
+              <label for="auth-city">City / District</label>
+              <input type="text" id="auth-city" placeholder="e.g. Mumbai"
+                style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="auth-email">Email Address</label>
+            <input type="email" id="auth-email" placeholder="name@example.com"
+              style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+          </div>
+
+          <div class="form-group">
+            <label for="auth-role">I am exploring adoption as:</label>
+            <select id="auth-role"
+              style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+              <option value="Prospective Adoptive Couple">Prospective Adoptive Couple (Married)</option>
+              <option value="Single Female Parent">Single Female Parent</option>
+              <option value="Single Male Parent">Single Male Parent</option>
+              <option value="Relative / Guardian">Relative / In-Family Adoption</option>
+              <option value="Child Welfare Researcher">Supporter / Counselor / Researcher</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.5rem;">
+            Continue to Personalized Portal
+          </button>
+        </form>
+
+        <div class="auth-divider">
+          <span>Or Quick Access</span>
+        </div>
+
+        <!-- Prominent Skip Button -->
+        <button type="button" class="btn-skip-guest" id="auth-skip-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+          <span>Skip & Browse as Guest</span>
+        </button>
+        <p style="font-size:0.78rem; color:var(--slate-medium); text-align:center; margin-top:8px;">
+          Zero sign-in needed. You have full access to all calculators, statutory roadmaps, and agency directory.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================
+       MODAL 4: AGENCY APPOINTMENT BOOKING MODAL
+       ========================================= -->
+  <div class="modal-overlay" id="agency-appointment-modal">
+    <div class="modal-content" style="max-width: 640px;">
+      <div class="modal-header">
+        <div>
+          <span style="font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; color:var(--primary-terracotta); font-weight:700;">
+            Specialized Adoption Agency (SAA)
+          </span>
+          <h3 style="margin-top:2px;">Schedule Official Agency Visit</h3>
+        </div>
+        <button class="modal-close-btn" onclick="window.closeModals()">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Form View -->
+        <div id="booking-form-view">
+          <p style="font-size:0.9rem; color:var(--slate-medium); margin-bottom:1.25rem;">
+            Book an in-person orientation or document review appointment with a verified adoption coordinator.
+          </p>
+
+          <form id="agency-booking-form">
+            <!-- Selected Agency Selection & Info Box -->
+            <div class="form-group">
+              <label for="book-agency-select">Target Adoption Agency *</label>
+              <select id="book-agency-select" required
+                style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy); font-weight:600;">
+                <!-- Populated dynamically by appointment-tracker.js -->
+              </select>
+            </div>
+
+            <div id="selected-agency-preview"></div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+              <div class="form-group">
+                <label for="book-parent-name">Primary Applicant Full Name *</label>
+                <input type="text" id="book-parent-name" required placeholder="e.g. Priya Sharma"
+                  style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+              </div>
+
+              <div class="form-group">
+                <label for="book-co-name">Spouse / Co-Applicant Name</label>
+                <input type="text" id="book-co-name" placeholder="e.g. Rahul Sharma (if married)"
+                  style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+              <div class="form-group">
+                <label for="book-phone">Mobile / WhatsApp Number *</label>
+                <input type="tel" id="book-phone" required placeholder="e.g. 9811234567"
+                  style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+              </div>
+
+              <div class="form-group">
+                <label for="book-email">Email Address</label>
+                <input type="email" id="book-email" placeholder="name@example.com"
+                  style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+              <div class="form-group">
+                <label for="book-city">Current City of Residence</label>
+                <input type="text" id="book-city" placeholder="e.g. New Delhi"
+                  style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+              </div>
+
+              <div class="form-group">
+                <label for="book-marital-status">Marital Status *</label>
+                <select id="book-marital-status" required
+                  style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+                  <option value="Married (>2 Years)">Married (Stable Relationship >2 Years)</option>
+                  <option value="Single Female">Single Female</option>
+                  <option value="Single Male">Single Male</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="book-purpose">Purpose of Agency Consultation *</label>
+              <select id="book-purpose" required
+                style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+                <option value="Initial Adoption Guidance & Eligibility Briefing">Initial Adoption Guidance & Eligibility Briefing</option>
+                <option value="Home Study Report (HSR) Preparation & Counseling">Home Study Report (HSR) Preparation & Counseling</option>
+                <option value="Physical Document Verification Desk">Physical Document Verification Desk</option>
+                <option value="Older Child / Sibling Pair Placement Inquiry">Older Child / Sibling Pair Placement Inquiry</option>
+                <option value="Special Healthcare Needs Medical Guidance">Special Healthcare Needs Medical Guidance</option>
+                <option value="Post-Adoption Support & Follow-up">Post-Adoption Support & Follow-up</option>
+              </select>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+              <div class="form-group">
+                <label for="book-date">Preferred Visit Date *</label>
+                <input type="date" id="book-date" required
+                  style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+              </div>
+
+              <div class="form-group">
+                <label for="book-slot">Preferred Time Slot *</label>
+                <select id="book-slot" required
+                  style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+                  <option value="Morning (10:30 AM – 12:30 PM)">Morning (10:30 AM – 12:30 PM)</option>
+                  <option value="Afternoon (02:00 PM – 04:00 PM)">Afternoon (02:00 PM – 04:00 PM)</option>
+                  <option value="Evening (04:00 PM – 06:00 PM)">Evening (04:00 PM – 06:00 PM)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="book-notes">Specific Inquiries or Requirements (Optional)</label>
+              <textarea id="book-notes" rows="2" placeholder="Mention any specific questions regarding timelines, documents, or medical inquiries..."
+                style="width:100%; padding:0.75rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy); resize:vertical;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; padding:0.85rem; font-size:1rem;">
+              Confirm Agency Appointment & Generate Tracking ID
+            </button>
+          </form>
+        </div>
+
+        <!-- Success Confirmation View -->
+        <div id="booking-success-view" style="display:none;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================
+       MODAL 5: APPLICATION & APPOINTMENT TRACKER
+       ========================================= -->
+  <div class="modal-overlay" id="application-tracker-modal">
+    <div class="modal-content" style="max-width: 680px;">
+      <div class="modal-header">
+        <div>
+          <span style="font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; color:var(--eucalyptus-teal); font-weight:700;">
+            Live Application Status Desk
+          </span>
+          <h3 style="margin-top:2px;">Track Your Adoption Application</h3>
+        </div>
+        <button class="modal-close-btn" onclick="window.closeModals()">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Search Input Bar -->
+        <form id="tracker-search-form" class="tracker-search-wrap">
+          <input type="text" id="tracker-search-input" placeholder="Enter Tracking ID (e.g. AASRA-DL-78241) or phone number..."
+            style="flex:1; padding:0.75rem 1rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-surface); color:var(--trust-navy);">
+          <button type="submit" class="btn btn-primary" style="padding:0.75rem 1.25rem;">
+            Track Status
+          </button>
+        </form>
+
+        <!-- Quick Recent Application Chips -->
+        <div id="tracker-recent-chips" style="margin-bottom:1rem;"></div>
+
+        <!-- Live Dashboard Results -->
+        <div id="tracker-result-container">
+          <!-- Injected via appointment-tracker.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/auth-gateway.js"></script>
+  <script src="js/eligibility-checker.js"></script>
+  <script src="js/process-roadmap.js"></script>
+  <script src="js/discovery-explorer.js"></script>
+  <script src="js/document-vault.js"></script>
+  <script src="js/cost-calculator.js"></script>
+  <script src="js/agency-directory.js"></script>
+  <script src="js/appointment-tracker.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

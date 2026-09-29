@@ -1,0 +1,86 @@
+:root {
+  /* Brand Warmth Palette */
+  --primary-terracotta: #D96B43;
+  --primary-hover: #C05832;
+  --primary-deep: #9E3E1C;
+  --primary-soft: #FBF0EB;
+  --primary-glow: rgba(217, 107, 67, 0.28);
+
+  --accent-amber: #E89A3C;
+  --accent-amber-soft: #FEF7ED;
+  --accent-gold: #D9822B;
+
+  --eucalyptus-teal: #2F6F68;
+  --eucalyptus-light: #E7F3F1;
+  --eucalyptus-glow: rgba(47, 111, 104, 0.2);
+
+  --trust-navy: #162533;
+  --slate-dark: #223240;
+  --slate-medium: #4A5B6B;
+  --slate-light: #7E90A0;
+  
+  --bg-page: #FAF7F2;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #FFFFFF;
+  --bg-muted: #F3EFEA;
+  --bg-warm-card: #FCFAF7;
+  
+  --border-subtle: rgba(22, 37, 51, 0.08);
+  --border-medium: rgba(22, 37, 51, 0.15);
+  --border-focus: #D96B43;
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 6px rgba(22, 37, 51, 0.04);
+  --shadow-md: 0 6px 18px rgba(22, 37, 51, 0.07);
+  --shadow-lg: 0 14px 36px rgba(22, 37, 51, 0.11);
+  --shadow-glow: 0 8px 28px rgba(217, 107, 67, 0.22);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.18s ease;
+  --transition-normal: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="dark"] {
+  --primary-terracotta: #E37B55;
+  --primary-hover: #F08D69;
+  --primary-deep: #C75D35;
+  --primary-soft: rgba(227, 123, 85, 0.15);
+  --primary-glow: rgba(227, 123, 85, 0.35);
+
+  --accent-amber: #F2A94F;
+  --accent-amber-soft: rgba(242, 169, 79, 0.15);
+
+  --eucalyptus-teal: #49988F;
+  --eucalyptus-light: rgba(73, 152, 143, 0.18);
+
+  --trust-navy: #F3F6F9;
+  --slate-dark: #E1E7ED;
+  --slate-medium: #A4B5C6;
+  --slate-light: #708496;
+  
+  --bg-page: #0E1620;
+  --bg-surface: #17222E;
+  --bg-surface-elevated: #1F2E3E;
+  --bg-muted: #131E2A;
+  --bg-warm-card: #1B2735;
+  
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-medium: rgba(255, 255, 255, 0.18);
+  --border-focus: #E37B55;
+
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 14px 36px rgba(0, 0, 0, 0.45);
+}
