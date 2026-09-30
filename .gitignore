@@ -1,0 +1,6 @@
+# Power BI local/cache files
+**/.pbi/
+
+# Temporary files
+*.tmp
+*.log

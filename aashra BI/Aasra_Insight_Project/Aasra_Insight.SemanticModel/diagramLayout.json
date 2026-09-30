@@ -1,0 +1,106 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 571.171134699018,
+            "y": 177.65709285666088
+          },
+          "nodeIndex": "Key Measures",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 337.01943651233256,
+            "y": 177.6218781863767
+          },
+          "nodeIndex": "Dim_State",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 337.17113469901807,
+            "y": -50
+          },
+          "nodeIndex": "Fact_Adoption_State",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 855.171134699018,
+            "y": 263.65709285666088
+          },
+          "nodeIndex": "Fact_Adoption_Trend",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 43.243885447364505
+          },
+          "nodeIndex": "Fact_Children_In_Care",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 337.15478002644335,
+            "y": 357.31418571332176
+          },
+          "nodeIndex": "Fact_IVF",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1139.171134699018,
+            "y": 263.65709285666088
+          },
+          "nodeIndex": "KPI_Reference",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

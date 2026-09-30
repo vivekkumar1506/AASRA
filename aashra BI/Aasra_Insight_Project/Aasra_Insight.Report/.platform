@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Aasra_Insight"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fc92e015-5393-4f17-a478-dd443771b920"
+  }
+}

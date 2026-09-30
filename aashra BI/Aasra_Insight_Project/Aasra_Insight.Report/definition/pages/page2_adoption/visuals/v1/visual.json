@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "v1",
+  "position": {
+    "x": 232,
+    "y": 128,
+    "z": 0,
+    "width": 516,
+    "height": 280
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Adoption_Trend"
+                    }
+                  },
+                  "Property": "FY"
+                }
+              },
+              "queryRef": "Fact_Adoption_Trend.FY",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Trend Adoptions"
+                }
+              },
+              "queryRef": "Key Measures.Trend Adoptions",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Adoption trend in India (2019-24)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

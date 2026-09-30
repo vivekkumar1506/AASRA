@@ -1,0 +1,143 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "v3",
+  "position": {
+    "x": 232,
+    "y": 420,
+    "z": 0,
+    "width": 1032,
+    "height": 284
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_State"
+                    }
+                  },
+                  "Property": "State"
+                }
+              },
+              "queryRef": "Dim_State.State",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_State"
+                    }
+                  },
+                  "Property": "Zone"
+                }
+              },
+              "queryRef": "Dim_State.Zone",
+              "active": true
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "IVF Patients"
+                }
+              },
+              "queryRef": "Key Measures.IVF Patients",
+              "active": true
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Total Adoptions"
+                }
+              },
+              "queryRef": "Key Measures.Total Adoptions",
+              "active": true
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Legally Free"
+                }
+              },
+              "queryRef": "Key Measures.Legally Free",
+              "active": true
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "IVF Patients per Adoption"
+                }
+              },
+              "queryRef": "Key Measures.IVF Patients per Adoption",
+              "active": true
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Legally Free per 100 IVF Patients"
+                }
+              },
+              "queryRef": "Key Measures.Legally Free per 100 IVF Patients",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'State-wise bridge: want a child vs child needs a family'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

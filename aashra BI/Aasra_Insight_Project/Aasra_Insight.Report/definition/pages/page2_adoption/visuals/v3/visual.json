@@ -1,0 +1,95 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "v3",
+  "position": {
+    "x": 232,
+    "y": 420,
+    "z": 0,
+    "width": 516,
+    "height": 284
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Children_In_Care"
+                    }
+                  },
+                  "Property": "Age_Group"
+                }
+              },
+              "queryRef": "Fact_Children_In_Care.Age_Group",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Children_In_Care"
+                    }
+                  },
+                  "Property": "Case_Status"
+                }
+              },
+              "queryRef": "Fact_Children_In_Care.Case_Status",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Children in Care"
+                }
+              },
+              "queryRef": "Key Measures.Children in Care",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Children by age group and case status'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

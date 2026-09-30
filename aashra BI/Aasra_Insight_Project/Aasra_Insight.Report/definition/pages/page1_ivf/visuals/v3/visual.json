@@ -1,0 +1,113 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "v3",
+  "position": {
+    "x": 232,
+    "y": 420,
+    "z": 0,
+    "width": 516,
+    "height": 284
+  },
+  "visual": {
+    "visualType": "scatterChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_State"
+                    }
+                  },
+                  "Property": "State"
+                }
+              },
+              "queryRef": "Dim_State.State",
+              "active": true
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Avg IVF Cost"
+                }
+              },
+              "queryRef": "Key Measures.Avg IVF Cost",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "IVF Success Rate"
+                }
+              },
+              "queryRef": "Key Measures.IVF Success Rate",
+              "active": true
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "IVF Patients"
+                }
+              },
+              "queryRef": "Key Measures.IVF Patients",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cost vs success rate'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

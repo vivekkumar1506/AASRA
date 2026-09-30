@@ -1,0 +1,91 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "v2",
+  "position": {
+    "x": 760,
+    "y": 128,
+    "z": 0,
+    "width": 504,
+    "height": 280
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_State"
+                    }
+                  },
+                  "Property": "State"
+                }
+              },
+              "queryRef": "Dim_State.State",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Male Adoptions"
+                }
+              },
+              "queryRef": "Key Measures.Male Adoptions",
+              "active": true
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Female Adoptions"
+                }
+              },
+              "queryRef": "Key Measures.Female Adoptions",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Adoptions by state and gender (FY23-24)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
