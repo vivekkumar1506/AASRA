@@ -12,7 +12,27 @@
   function init() {
     setupBookingModal();
     setupTrackerModal();
-    setupSeedApplications(); // Provide realistic demo application if none exist
+    setupSeedApplications();
+    syncApplicationsFromDatabase();
+  }
+
+  async function syncApplicationsFromDatabase() {
+    if (window.AasraAPI) {
+      try {
+        const res = await window.AasraAPI.getApplications();
+        if (res.ok && Array.isArray(res.data) && res.data.length > 0) {
+          const local = window.getSavedApplications();
+          const existingIds = new Set(local.map(a => a.trackingId));
+          const toAdd = res.data.filter(a => !existingIds.has(a.trackingId));
+          if (toAdd.length > 0) {
+            saveApplications([...toAdd, ...local]);
+            renderRecentApplicationChips();
+          }
+        }
+      } catch (e) {
+        console.warn('Sync applications error:', e);
+      }
+    }
   }
 
   // Get all saved applications
@@ -218,6 +238,32 @@
         ]
       };
 
+      // Save to Backend Database
+      if (window.AasraAPI) {
+        window.AasraAPI.createApplication({
+          agency_id: agency.id,
+          agency_name: agency.name,
+          agency_location: ${agency.district || ''}, .replace(/^,\s*/, ''),
+          agency_phone: agency.phone || '',
+          agency_address: agency.address || '',
+          parent_name: parentName,
+          co_applicant_name: coApplicant,
+          phone: phone,
+          email: email,
+          city: city,
+          marital_status: maritalStatus,
+          purpose: purpose,
+          date: date,
+          time_slot: timeSlot,
+          notes: notes,
+          tracking_id: trackingId
+        }).then(res => {
+          if (res.ok) {
+            window.showToast(Application saved to live database (Tracking ID: ), 'success');
+          }
+        }).catch(err => console.warn('Could not sync application to database:', err));
+      }
+
       // Save to localStorage
       const apps = window.getSavedApplications();
       apps.unshift(newApp);
@@ -389,15 +435,31 @@
     `;
   }
 
-  window.executeTrackingLookup = function (query) {
-    const apps = window.getSavedApplications();
+  window.executeTrackingLookup = async function (query) {
     const cleanQuery = query.toLowerCase().trim();
+    let match = null;
 
-    const match = apps.find(a =>
-      a.trackingId.toLowerCase() === cleanQuery ||
-      a.phone.replace(/[^0-9]/g, '') === cleanQuery.replace(/[^0-9]/g, '') ||
-      a.parentName.toLowerCase().includes(cleanQuery)
-    );
+    // 1. Check live database first
+    if (window.AasraAPI) {
+      try {
+        const res = await window.AasraAPI.getApplications(cleanQuery);
+        if (res.ok && Array.isArray(res.data) && res.data.length > 0) {
+          match = res.data[0];
+        }
+      } catch (err) {
+        console.warn('Backend lookup error:', err);
+      }
+    }
+
+    // 2. Fallback to localStorage cache
+    if (!match) {
+      const apps = window.getSavedApplications();
+      match = apps.find(a =>
+        (a.trackingId && a.trackingId.toLowerCase() === cleanQuery) ||
+        (a.phone && a.phone.replace(/[^0-9]/g, '') === cleanQuery.replace(/[^0-9]/g, '')) ||
+        (a.parentName && a.parentName.toLowerCase().includes(cleanQuery))
+      );
+    }
 
     const resultContainer = document.getElementById('tracker-result-container');
     if (!resultContainer) return;

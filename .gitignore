@@ -4,3 +4,28 @@
 # Temporary files
 *.tmp
 *.log
+
+# Environment and secrets
+.env
+
+# Local databases
+*.db
+
+# Python virtual environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# RAG generated vector store
+app/vectorstore/chroma/
+
+# Do not upload old CodeIgniter backend
+aashra BI/backend/
+app/routers/chat_backup.py
+app/routers/chat_backup_before_rag.py
+Health
+Interactive
+Web

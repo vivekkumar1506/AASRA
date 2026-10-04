@@ -1,0 +1,975 @@
+{
+  "dataset_name": "CARA FAQ Knowledge Base",
+  "description": "Structured FAQ dataset for a Retrieval-Augmented Generation (RAG) application focused on Indian adoption information.",
+  "language": "English",
+  "record_count": 120,
+  "created_date": "2026-10-03",
+  "important_note": "Use official CARA regulations, schedules, procedures and current SAA directory as authoritative sources. FAQ records are intended for retrieval/evaluation and should not replace current official documents.",
+  "official_sources": [
+    "https://cara.wcd.gov.in/",
+    "https://cara.wcd.gov.in/PDF/adoption_regulations_2022_2709.pdf",
+    "https://cara.wcd.gov.in/PDF/CARA%20FAQs%2002022024.pdf"
+  ],
+  "faqs": [
+    {
+      "id": "faq_001",
+      "question": "What is CARA?",
+      "answer": "CARA is the Central Adoption Resource Authority, the statutory authority under the Ministry of Women & Child Development, Government of India, dealing with adoption matters.",
+      "topic": "general",
+      "adoption_type": "all",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_002",
+      "question": "What is CARINGS?",
+      "answer": "CARINGS (Child Adoption Resource Information and Guidance System) is the designated online system used for adoption registration, processing, monitoring and related records.",
+      "topic": "registration",
+      "adoption_type": "all",
+      "source": "CARA"
+    },
+    {
+      "id": "faq_003",
+      "question": "Where should prospective adoptive parents register?",
+      "answer": "Prospective adoptive parents should register through the designated CARINGS adoption portal and complete the prescribed application and document process.",
+      "topic": "registration",
+      "adoption_type": "in-country",
+      "source": "CARA FAQ / Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_004",
+      "question": "Who is a prospective adoptive parent?",
+      "answer": "A prospective adoptive parent (PAP) is a person or couple who intends to adopt a child and is eligible to apply under the applicable adoption rules.",
+      "topic": "general",
+      "adoption_type": "all",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_005",
+      "question": "Who can adopt a child in India?",
+      "answer": "A person or couple meeting the applicable eligibility conditions may adopt, subject to the Juvenile Justice Act and Adoption Regulations, 2022.",
+      "topic": "eligibility",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_006",
+      "question": "Can a single woman adopt a child?",
+      "answer": "Yes. A single female can adopt a child of any gender, subject to the applicable eligibility requirements.",
+      "topic": "eligibility",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_007",
+      "question": "Can a single man adopt a girl child?",
+      "answer": "No. A single male is not eligible to adopt a girl child under the applicable adoption regulations.",
+      "topic": "eligibility",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_008",
+      "question": "Can a single man adopt a boy child?",
+      "answer": "A single male may be eligible to adopt a boy child if he satisfies all other applicable eligibility requirements.",
+      "topic": "eligibility",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_009",
+      "question": "Can a married couple adopt a child?",
+      "answer": "Yes. A married couple can apply if they meet the applicable eligibility requirements and both spouses consent to the adoption.",
+      "topic": "eligibility",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_010",
+      "question": "Is consent of both spouses required?",
+      "answer": "Yes. Consent of both spouses is required for a married couple seeking adoption.",
+      "topic": "eligibility",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_011",
+      "question": "How long should a married couple generally have been married?",
+      "answer": "A married couple generally needs at least two years of stable marital relationship. This condition does not apply to relative adoption or step-parent adoption.",
+      "topic": "eligibility",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_012",
+      "question": "Does the two-year marriage condition apply to relative adoption?",
+      "answer": "No. The two-year stable-marriage condition does not apply to relative adoption.",
+      "topic": "eligibility",
+      "adoption_type": "relative",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_013",
+      "question": "Does the two-year marriage condition apply to step-parent adoption?",
+      "answer": "No. The two-year stable-marriage condition does not apply to step-parent adoption.",
+      "topic": "eligibility",
+      "adoption_type": "step-parent",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_014",
+      "question": "What general health condition applies to prospective adoptive parents?",
+      "answer": "The prospective adoptive parent should be physically, mentally and emotionally capable and should not have a life-threatening medical condition.",
+      "topic": "eligibility",
+      "adoption_type": "all",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_015",
+      "question": "Can a person with a criminal conviction adopt?",
+      "answer": "A person convicted in a criminal act is not eligible under the applicable adoption eligibility conditions.",
+      "topic": "eligibility",
+      "adoption_type": "all",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_016",
+      "question": "Can a person accused in a child-rights violation case adopt?",
+      "answer": "The eligibility rules exclude a person who is accused in a case involving violation of child rights.",
+      "topic": "eligibility",
+      "adoption_type": "all",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_017",
+      "question": "Is there a minimum age difference between the parent and child?",
+      "answer": "Generally, the prospective adoptive parent or at least one of the spouses should be at least 25 years older than the child.",
+      "topic": "age",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_018",
+      "question": "Does the 25-year age difference apply to relative adoption?",
+      "answer": "No. The minimum age-difference requirement does not apply to relative adoption.",
+      "topic": "age",
+      "adoption_type": "relative",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_019",
+      "question": "Does the 25-year age difference apply to step-parent adoption?",
+      "answer": "No. The minimum age-difference requirement does not apply to step-parent adoption.",
+      "topic": "age",
+      "adoption_type": "step-parent",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_020",
+      "question": "What is the maximum composite age for a couple adopting a child up to 2 years old?",
+      "answer": "The maximum composite age of the couple is 85 years for a child up to 2 years of age.",
+      "topic": "age",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_021",
+      "question": "What is the maximum age for a single parent adopting a child up to 2 years old?",
+      "answer": "The maximum age for a single parent is 40 years for a child up to 2 years of age.",
+      "topic": "age",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_022",
+      "question": "What is the maximum composite age for a couple adopting a child above 2 and up to 4 years?",
+      "answer": "The maximum composite age of the couple is 90 years for a child above 2 and up to 4 years of age.",
+      "topic": "age",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_023",
+      "question": "What is the maximum age for a single parent adopting a child above 2 and up to 4 years?",
+      "answer": "The maximum age for a single parent is 45 years for a child above 2 and up to 4 years of age.",
+      "topic": "age",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_024",
+      "question": "What is the maximum composite age for a couple adopting a child above 4 and up to 8 years?",
+      "answer": "The maximum composite age of the couple is 100 years for a child above 4 and up to 8 years of age.",
+      "topic": "age",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_025",
+      "question": "What is the maximum age for a single parent adopting a child above 4 and up to 8 years?",
+      "answer": "The maximum age for a single parent is 50 years for a child above 4 and up to 8 years of age.",
+      "topic": "age",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_026",
+      "question": "What is the maximum composite age for a couple adopting a child above 8 and up to 18 years?",
+      "answer": "The maximum composite age of the couple is 110 years for a child above 8 and up to 18 years of age.",
+      "topic": "age",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_027",
+      "question": "What is the maximum age for a single parent adopting a child above 8 and up to 18 years?",
+      "answer": "The maximum age for a single parent is 55 years for a child above 8 and up to 18 years of age.",
+      "topic": "age",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_028",
+      "question": "What children can be legally placed for adoption?",
+      "answer": "An orphan, abandoned or surrendered child who has been declared legally free for adoption by the Child Welfare Committee can be placed for adoption. Relative and step-parent adoption have separate provisions.",
+      "topic": "child_status",
+      "adoption_type": "all",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_029",
+      "question": "Who declares an orphaned, abandoned or surrendered child legally free for adoption?",
+      "answer": "The Child Welfare Committee has the statutory role of determining whether a child in need of care and protection is legally free for adoption under the applicable process.",
+      "topic": "child_status",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_030",
+      "question": "What is an SAA?",
+      "answer": "SAA means Specialised Adoption Agency. It is a recognised agency authorised to perform prescribed adoption-related functions and care/placement activities.",
+      "topic": "stakeholders",
+      "adoption_type": "all",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_031",
+      "question": "What is SARA?",
+      "answer": "SARA means State Adoption Resource Agency. It performs state-level functions relating to promotion, facilitation, monitoring and regulation of adoption activities.",
+      "topic": "stakeholders",
+      "adoption_type": "all",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_032",
+      "question": "What is DCPU?",
+      "answer": "DCPU means District Child Protection Unit. It performs prescribed district-level child-protection and adoption-related functions.",
+      "topic": "stakeholders",
+      "adoption_type": "all",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_033",
+      "question": "Who issues the adoption order under the 2022 regulations?",
+      "answer": "The District Magistrate issues the adoption order according to the prescribed procedure.",
+      "topic": "process",
+      "adoption_type": "all",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_034",
+      "question": "What is a Home Study Report?",
+      "answer": "A Home Study Report assesses the prospective adoptive parent or family, including relevant family, social, economic, health and home-environment information, to determine suitability for adoption.",
+      "topic": "process",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_035",
+      "question": "What documents are commonly required for registration?",
+      "answer": "Common documents include a current family photograph, PAN card, proof of date of birth, proof of residence, income proof, medical certificate and applicable marriage, divorce or death documents, along with other prescribed documents.",
+      "topic": "documents",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022, Schedule VI"
+    },
+    {
+      "id": "faq_036",
+      "question": "Is PAN card required for prospective adoptive parents?",
+      "answer": "PAN card is included in the prescribed registration document list, subject to the applicable applicant category.",
+      "topic": "documents",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022, Schedule VI"
+    },
+    {
+      "id": "faq_037",
+      "question": "Is proof of date of birth required?",
+      "answer": "Yes. Proof of date of birth is included in the prescribed document list.",
+      "topic": "documents",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022, Schedule VI"
+    },
+    {
+      "id": "faq_038",
+      "question": "Is proof of residence required?",
+      "answer": "Yes. Proof of residence is included in the prescribed document list. Examples may include Aadhaar, voter card, passport or specified utility/telephone documents, as applicable.",
+      "topic": "documents",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022, Schedule VI"
+    },
+    {
+      "id": "faq_039",
+      "question": "Is income proof required for adoption registration?",
+      "answer": "Yes. Income proof for the prescribed period is included in the registration documents.",
+      "topic": "documents",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022, Schedule VI"
+    },
+    {
+      "id": "faq_040",
+      "question": "Is a medical certificate required?",
+      "answer": "Yes. A medical certificate from a medical practitioner confirming fitness to adopt and addressing the conditions specified by the regulations is required. For a married couple, the applicable certificates are required for both spouses.",
+      "topic": "documents",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022, Schedule VI"
+    },
+    {
+      "id": "faq_041",
+      "question": "Is a marriage certificate required?",
+      "answer": "A marriage certificate is required where applicable as part of the prescribed documentation.",
+      "topic": "documents",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022, Schedule VI"
+    },
+    {
+      "id": "faq_042",
+      "question": "What document is needed if a spouse is divorced?",
+      "answer": "Where applicable, the prescribed divorce decree or relevant declaration/affidavit should be submitted.",
+      "topic": "documents",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022, Schedule VI"
+    },
+    {
+      "id": "faq_043",
+      "question": "What document is needed if the spouse has died?",
+      "answer": "Where applicable, the spouse's death certificate should be submitted.",
+      "topic": "documents",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022, Schedule VI"
+    },
+    {
+      "id": "faq_044",
+      "question": "Are reference letters required?",
+      "answer": "Two reference letters from acquaintances or relatives are included in the prescribed documentation, subject to the applicable case requirements.",
+      "topic": "documents",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022, Schedule VI"
+    },
+    {
+      "id": "faq_045",
+      "question": "Is consent of older children required?",
+      "answer": "Where applicable, consent of the older child or children in the adoptive family is required according to the prescribed conditions.",
+      "topic": "documents",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_046",
+      "question": "Is an infertility certificate required for adoption?",
+      "answer": "No. An infertility certificate is not required for adoption.",
+      "topic": "documents",
+      "adoption_type": "all",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_047",
+      "question": "What is the Home Study Report fee?",
+      "answer": "The in-country fee schedule specifies ₹6,000 for the Home Study Report/Family Background Report, inclusive of travel expenses.",
+      "topic": "fees",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022, Schedule XV"
+    },
+    {
+      "id": "faq_048",
+      "question": "What is the in-country adoption fee?",
+      "answer": "The fee schedule specifies ₹50,000 for adoption-related child study, medical examination, child care/maintenance and administrative costs.",
+      "topic": "fees",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022, Schedule XV"
+    },
+    {
+      "id": "faq_049",
+      "question": "What is the fee for an additional child in a sibling adoption?",
+      "answer": "The fee schedule specifies ₹10,000 for each additional child in a sibling adoption.",
+      "topic": "fees",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022, Schedule XV"
+    },
+    {
+      "id": "faq_050",
+      "question": "What is the post-adoption follow-up fee?",
+      "answer": "The fee schedule specifies ₹2,000 per post-adoption follow-up visit/report, with four visits/reports within two years under the prescribed schedule.",
+      "topic": "fees",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022, Schedule XV"
+    },
+    {
+      "id": "faq_051",
+      "question": "What is the fee for revalidation of a Home Study Report?",
+      "answer": "Where revalidation is required, the fee schedule specifies ₹2,000 per visit/report, inclusive of travel expenses.",
+      "topic": "fees",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022, Schedule XV"
+    },
+    {
+      "id": "faq_052",
+      "question": "Can an SAA ask prospective adoptive parents for a donation?",
+      "answer": "The regulations state that a Specialised Adoption Agency should not accept donations from prospective adoptive parents for adoption.",
+      "topic": "fees",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_053",
+      "question": "What is the first step in adoption?",
+      "answer": "The usual first step for a prospective adoptive parent is registration through the designated CARINGS portal.",
+      "topic": "process",
+      "adoption_type": "in-country",
+      "source": "CARA FAQ / CARA"
+    },
+    {
+      "id": "faq_054",
+      "question": "What happens after registration?",
+      "answer": "The applicant submits prescribed documents and proceeds through verification and the Home Study Report process before being considered for referrals according to the applicable rules.",
+      "topic": "process",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_055",
+      "question": "What happens after the Home Study Report?",
+      "answer": "Once the applicant is found eligible and suitable, child referrals may be made according to the applicable matching and referral rules.",
+      "topic": "process",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_056",
+      "question": "What is a Child Study Report?",
+      "answer": "A Child Study Report contains prescribed information about a child and is used during the adoption process and referral/matching process.",
+      "topic": "process",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_057",
+      "question": "What is a Medical Examination Report of the child?",
+      "answer": "It is the prescribed medical report containing the child's relevant medical information for the adoption process and consideration by prospective adoptive parents.",
+      "topic": "process",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_058",
+      "question": "Can prospective adoptive parents review the child's medical information?",
+      "answer": "Prospective adoptive parents are provided the prescribed Child Study Report and Medical Examination Report during the referral process, subject to the applicable procedure and privacy safeguards.",
+      "topic": "process",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_059",
+      "question": "What is matching in adoption?",
+      "answer": "Matching is the prescribed process through which a prospective adoptive parent is considered for a child referral based on applicable eligibility, preference, availability and regulatory rules.",
+      "topic": "process",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_060",
+      "question": "What happens after a child is matched?",
+      "answer": "The prospective adoptive parent completes the prescribed acceptance and related formalities, followed by the remaining adoption procedure including the application and adoption order process.",
+      "topic": "process",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_061",
+      "question": "What is pre-adoption foster care?",
+      "answer": "Pre-adoption foster care is the prescribed arrangement under which the child may be placed with the prospective adoptive parent after completion of the required formalities and before the final adoption order.",
+      "topic": "process",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_062",
+      "question": "Who files the adoption application?",
+      "answer": "The prescribed adoption application is filed through the appropriate agency/authority according to the applicable procedure.",
+      "topic": "process",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_063",
+      "question": "What happens after the adoption application is filed?",
+      "answer": "The application is considered by the competent authority, and the District Magistrate issues the adoption order according to the prescribed procedure.",
+      "topic": "process",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_064",
+      "question": "Is post-adoption follow-up required?",
+      "answer": "Yes. Post-adoption follow-up reports/visits are prescribed under the regulations for applicable in-country adoption cases.",
+      "topic": "process",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_065",
+      "question": "What happens if an applicant's Home Study Report needs revalidation?",
+      "answer": "Where prescribed, the Home Study Report is revalidated according to the applicable rules and fee schedule.",
+      "topic": "process",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_066",
+      "question": "Can a family with existing biological children adopt?",
+      "answer": "Yes. Having a biological child does not automatically prevent adoption, although the regulations contain conditions concerning families with two or more children and referral of certain categories of children.",
+      "topic": "eligibility",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_067",
+      "question": "Are couples with three or more children considered for ordinary child referral?",
+      "answer": "A couple with three or more children is generally not considered for normal child referral, subject to exceptions such as special-needs/hard-to-place children and relative or step-parent adoption.",
+      "topic": "eligibility",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_068",
+      "question": "What exceptions can apply to families with three or more children?",
+      "answer": "Exceptions include cases involving special-needs or hard-to-place children and certain relative or step-parent adoption cases, subject to the applicable regulations.",
+      "topic": "eligibility",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_069",
+      "question": "What is relative adoption?",
+      "answer": "Relative adoption is adoption of a child by a relative as defined under the Juvenile Justice Act and applicable adoption regulations.",
+      "topic": "relative_adoption",
+      "adoption_type": "relative",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_070",
+      "question": "Is relative adoption processed exactly like ordinary in-country adoption?",
+      "answer": "No. Relative adoption has a separate prescribed procedure and should be handled using the specific relative-adoption provisions and documents.",
+      "topic": "relative_adoption",
+      "adoption_type": "relative",
+      "source": "CARA Adoption Regulations, 2022 / CARA procedure"
+    },
+    {
+      "id": "faq_071",
+      "question": "What is step-parent adoption?",
+      "answer": "Step-parent adoption is adoption by a step-parent of the child of their spouse, following the separate provisions and procedure prescribed by the adoption regulations.",
+      "topic": "step_parent",
+      "adoption_type": "step-parent",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_072",
+      "question": "Does step-parent adoption follow the normal referral system?",
+      "answer": "No. Step-parent adoption is a separate adoption category with its own prescribed procedure and documentation.",
+      "topic": "step_parent",
+      "adoption_type": "step-parent",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_073",
+      "question": "What is inter-country adoption?",
+      "answer": "Inter-country adoption involves adoption where the applicable circumstances involve applicants and/or a child across countries and is governed by additional procedures and safeguards.",
+      "topic": "inter_country",
+      "adoption_type": "inter-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_074",
+      "question": "Can an NRI adopt a child in India?",
+      "answer": "NRIs can adopt under the applicable inter-country or relevant adoption procedure, subject to eligibility, documentation and country-specific requirements.",
+      "topic": "inter_country",
+      "adoption_type": "inter-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_075",
+      "question": "Can an OCI cardholder adopt an Indian relative's child?",
+      "answer": "An OCI cardholder may use the applicable inter-country relative-adoption procedure, subject to the prescribed eligibility, Home Study, registration and other requirements.",
+      "topic": "inter_country",
+      "adoption_type": "inter-country-relative",
+      "source": "CARA inter-country relative adoption procedure"
+    },
+    {
+      "id": "faq_076",
+      "question": "Is inter-country relative adoption the same as ordinary in-country adoption?",
+      "answer": "No. Inter-country relative adoption follows a separate procedure with additional authorities and documentation depending on the applicant's country and status.",
+      "topic": "inter_country",
+      "adoption_type": "inter-country-relative",
+      "source": "CARA inter-country relative adoption procedure"
+    },
+    {
+      "id": "faq_077",
+      "question": "What is SAA recognition?",
+      "answer": "SAA recognition means that an adoption agency has been recognised by the competent authority to perform prescribed adoption-related functions.",
+      "topic": "SAA",
+      "adoption_type": "all",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_078",
+      "question": "Can I choose any private orphanage for legal adoption?",
+      "answer": "No. Adoption should be processed through the legally recognised system and recognised adoption agencies/authorities. A private institution should not be assumed to be authorised merely because it provides child-care services.",
+      "topic": "SAA",
+      "adoption_type": "all",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_079",
+      "question": "How can I find an adoption centre?",
+      "answer": "Use the current recognised Specialised Adoption Agency information available through the official CARA/CARINGS/SARA system and verify the agency's current recognition and contact details.",
+      "topic": "location",
+      "adoption_type": "all",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_080",
+      "question": "Can the RAG system provide an adoption centre near a city?",
+      "answer": "Yes, if it has a current structured SAA directory containing state, district, agency name, address, contact information, recognition status and verification date.",
+      "topic": "location",
+      "adoption_type": "all",
+      "source": "CARA SAA directory / RAG design"
+    },
+    {
+      "id": "faq_081",
+      "question": "Should an AI invent an adoption centre address if it cannot find one?",
+      "answer": "No. If an address or recognition status cannot be verified from an official current source, the AI should say that it could not verify the information rather than inventing it.",
+      "topic": "location",
+      "adoption_type": "all",
+      "source": "RAG safety rule"
+    },
+    {
+      "id": "faq_082",
+      "question": "How often should SAA contact information be checked?",
+      "answer": "SAA directory information should be treated as refreshable operational data. The applicable regulations require state-level publication of SAA contact details at least once a year, but a production system should verify the current official directory before presenting a location as current.",
+      "topic": "location",
+      "adoption_type": "all",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_083",
+      "question": "What should an SAA location record contain?",
+      "answer": "A useful record should contain state/UT, district, SAA name, complete address, telephone, email, recognition/status information, source URL and last-verified date.",
+      "topic": "location",
+      "adoption_type": "all",
+      "source": "RAG data design"
+    },
+    {
+      "id": "faq_084",
+      "question": "What should I do if a listed SAA phone number does not work?",
+      "answer": "Verify the agency using the latest official CARA/CARINGS/SARA information rather than relying on an old cached contact number.",
+      "topic": "location",
+      "adoption_type": "all",
+      "source": "CARA / RAG data freshness guidance"
+    },
+    {
+      "id": "faq_085",
+      "question": "What is the CARA helpdesk number?",
+      "answer": "CARA materials list the toll-free help line as 1800-11-1311. Because contact details can change, users should verify the current contact information on the official CARA website.",
+      "topic": "helpdesk",
+      "adoption_type": "all",
+      "source": "CARA procedure/official material"
+    },
+    {
+      "id": "faq_086",
+      "question": "What is the CARA helpdesk email?",
+      "answer": "CARA materials list carahdesk.wcd@nic.in as a helpdesk email. Because contact details can change, users should verify the current contact information on the official CARA website.",
+      "topic": "helpdesk",
+      "adoption_type": "all",
+      "source": "CARA procedure/official material"
+    },
+    {
+      "id": "faq_087",
+      "question": "What happens if a couple has filed for divorce after registering?",
+      "answer": "CARA's FAQ states that a couple who has filed for divorce needs to wait for finalisation; after the applicable change to single status, the Home Study Report is revalidated according to the prescribed process.",
+      "topic": "special_cases",
+      "adoption_type": "in-country",
+      "source": "CARA FAQ"
+    },
+    {
+      "id": "faq_088",
+      "question": "Can a person adopt irrespective of whether they already have a biological child?",
+      "answer": "A person is not automatically disqualified merely because they have a biological child, but the regulations contain specific provisions affecting families with two or more children and referral eligibility.",
+      "topic": "eligibility",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_089",
+      "question": "What is the best source for current adoption fees?",
+      "answer": "The current CARA Adoption Regulations and applicable fee schedule should be treated as the authoritative source for fees. A RAG system should return the regulation version and verification date with fee answers.",
+      "topic": "fees",
+      "adoption_type": "all",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_090",
+      "question": "What is the best source for current adoption eligibility?",
+      "answer": "The current Adoption Regulations, 2022 together with the applicable Juvenile Justice Act provisions should be used for eligibility answers.",
+      "topic": "eligibility",
+      "adoption_type": "all",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_091",
+      "question": "What is the best source for current adoption documents?",
+      "answer": "The applicable schedules of the current Adoption Regulations, 2022 should be used for document requirements, with the exact list depending on the adoption category and applicant circumstances.",
+      "topic": "documents",
+      "adoption_type": "all",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_092",
+      "question": "Should an AI answer legal adoption questions without citing a source?",
+      "answer": "For a reliable RAG system, legal or regulatory adoption answers should include the relevant CARA regulation, schedule or official procedure as the source and should identify the verification date.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG design guidance"
+    },
+    {
+      "id": "faq_093",
+      "question": "Should the entire CARA website be embedded as one vector?",
+      "answer": "No. Regulatory documents should be split into meaningful chunks by topic, section and document, with metadata such as source, regulation, adoption type and verification date.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG design guidance"
+    },
+    {
+      "id": "faq_094",
+      "question": "What metadata should be stored with a CARA FAQ?",
+      "answer": "Useful metadata includes topic, adoption type, source document, regulation/section, document version or date, last verified date and FAQ ID.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG design guidance"
+    },
+    {
+      "id": "faq_095",
+      "question": "How should an RAG system answer a location question?",
+      "answer": "For a location question, the system should retrieve current structured SAA records using state/district/city filters and verify recognition status instead of relying only on semantic similarity.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG design guidance"
+    },
+    {
+      "id": "faq_096",
+      "question": "How should an RAG system answer a fee question?",
+      "answer": "It should retrieve the applicable current fee schedule, identify the adoption category, provide the amount, and cite the source/version and verification date.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG design guidance"
+    },
+    {
+      "id": "faq_097",
+      "question": "How should an RAG system handle relative adoption questions?",
+      "answer": "The system should classify the question as relative adoption first and retrieve the specific relative-adoption procedure rather than returning the ordinary in-country adoption workflow.",
+      "topic": "RAG",
+      "adoption_type": "relative",
+      "source": "RAG design guidance"
+    },
+    {
+      "id": "faq_098",
+      "question": "How should an RAG system handle step-parent adoption questions?",
+      "answer": "It should classify the request as step-parent adoption and retrieve the separate step-parent provisions and documents before generating an answer.",
+      "topic": "RAG",
+      "adoption_type": "step-parent",
+      "source": "RAG design guidance"
+    },
+    {
+      "id": "faq_099",
+      "question": "How should an RAG system handle inter-country adoption questions?",
+      "answer": "It should identify the applicant's status and country circumstances and retrieve the applicable inter-country procedure rather than using only the standard in-country process.",
+      "topic": "RAG",
+      "adoption_type": "inter-country",
+      "source": "RAG design guidance"
+    },
+    {
+      "id": "faq_100",
+      "question": "What should the AI do when CARA documents conflict?",
+      "answer": "The system should prefer the latest applicable official regulation or amendment, identify the source and date, and flag uncertainty rather than silently combining conflicting rules.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG design guidance"
+    },
+    {
+      "id": "faq_101",
+      "question": "Should old CARA FAQs override the Adoption Regulations, 2022?",
+      "answer": "No. Where an older FAQ conflicts with the current applicable regulation, the current regulation should be treated as authoritative, while the older FAQ can be retained as historical context.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG design guidance"
+    },
+    {
+      "id": "faq_102",
+      "question": "Can the RAG system guarantee that a user will receive a child?",
+      "answer": "No. A RAG system can explain the rules and process but cannot guarantee referral, matching, placement or adoption approval.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG safety guidance"
+    },
+    {
+      "id": "faq_103",
+      "question": "Can an AI select a child for prospective adoptive parents?",
+      "answer": "No. The AI should explain the prescribed referral and matching process and should not make an independent placement decision.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG safety guidance"
+    },
+    {
+      "id": "faq_104",
+      "question": "Can users privately arrange adoption outside CARA?",
+      "answer": "A legal adoption should follow the applicable statutory and regulatory process. An AI system should not advise users to bypass recognised authorities or arrange an informal/private adoption.",
+      "topic": "legal_process",
+      "adoption_type": "all",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_105",
+      "question": "What should I do if I only want a child from a particular city?",
+      "answer": "The availability and referral process is governed by the applicable adoption rules. A location preference should not be treated as a guarantee of a child from that city.",
+      "topic": "referral",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_106",
+      "question": "Can an applicant demand a specific child?",
+      "answer": "No. Child referral and matching follow the prescribed adoption process and cannot be treated as a private demand for a particular child.",
+      "topic": "referral",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_107",
+      "question": "What is a hard-to-place child?",
+      "answer": "The regulations use the category of hard-to-place children in provisions concerning adoption and referral. The exact treatment should be answered from the applicable current regulation rather than inferred by the AI.",
+      "topic": "child_category",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_108",
+      "question": "What are special-needs children in the adoption system?",
+      "answer": "Special-needs children are a category recognised in the adoption framework and may be subject to specific referral and eligibility provisions. The current regulation should be consulted for the exact definition and procedure.",
+      "topic": "child_category",
+      "adoption_type": "in-country",
+      "source": "CARA Adoption Regulations, 2022"
+    },
+    {
+      "id": "faq_109",
+      "question": "Why should CARA documents be chunked for RAG?",
+      "answer": "Chunking lets the retriever return the specific eligibility, document, fee or procedure section relevant to a question instead of sending an entire regulation to the language model.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG design guidance"
+    },
+    {
+      "id": "faq_110",
+      "question": "Should FAQ answers be used as the only source of truth?",
+      "answer": "No. FAQ pairs are useful for retrieval and evaluation, but the authoritative source should remain the applicable CARA regulation, schedule, official procedure or current SAA directory.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG design guidance"
+    },
+    {
+      "id": "faq_111",
+      "question": "What should happen when no relevant CARA source is retrieved?",
+      "answer": "The AI should say that it could not verify the answer from the available CARA sources and should direct the user to the current official CARA/CARINGS information rather than inventing an answer.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG safety guidance"
+    },
+    {
+      "id": "faq_112",
+      "question": "Should the RAG system store the date when a CARA document was verified?",
+      "answer": "Yes. A last-verified date is especially important for fees, contact details, SAA locations and other operational information that may change.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG design guidance"
+    },
+    {
+      "id": "faq_113",
+      "question": "Can I use this FAQ JSON as training data to fine-tune an LLM?",
+      "answer": "It can be used as a structured evaluation or knowledge dataset, but for a RAG system it is generally better to keep the official CARA documents as the authoritative retrieval sources and use the FAQ dataset for retrieval/evaluation.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG design guidance"
+    },
+    {
+      "id": "faq_114",
+      "question": "What fields should a CARA FAQ JSON record contain?",
+      "answer": "A practical record can contain id, question, answer, topic, adoption_type, source, section or regulation, document_version and last_verified.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG design guidance"
+    },
+    {
+      "id": "faq_115",
+      "question": "How can I test whether my CARA RAG works?",
+      "answer": "Create test questions across eligibility, age, documents, fees, process, relative adoption, step-parent adoption, inter-country adoption and SAA location. Check whether the correct source chunk is retrieved and whether the final answer stays within the retrieved evidence.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG evaluation guidance"
+    },
+    {
+      "id": "faq_116",
+      "question": "What is retrieval accuracy in a RAG system?",
+      "answer": "Retrieval accuracy measures whether the system retrieves the relevant source chunks needed to answer a question correctly.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG evaluation guidance"
+    },
+    {
+      "id": "faq_117",
+      "question": "What is answer faithfulness in RAG?",
+      "answer": "Answer faithfulness means the generated answer is supported by the information retrieved from the source documents rather than unsupported model knowledge.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG evaluation guidance"
+    },
+    {
+      "id": "faq_118",
+      "question": "Should a RAG chatbot say when information is uncertain?",
+      "answer": "Yes. If the available official sources are incomplete, conflicting or outdated, the chatbot should state the uncertainty and provide the relevant source or advise verification from current CARA information.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG safety guidance"
+    },
+    {
+      "id": "faq_119",
+      "question": "Can the RAG chatbot provide legal advice about a user's individual adoption case?",
+      "answer": "It can provide general information from CARA's published rules, but case-specific legal or administrative decisions should be confirmed with the competent adoption authority or qualified professional.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG safety guidance"
+    },
+    {
+      "id": "faq_120",
+      "question": "What is the most important rule for a CARA RAG chatbot?",
+      "answer": "The chatbot should ground answers in current official CARA sources, distinguish different adoption categories, cite the source used, avoid inventing information and clearly indicate when current verification is required.",
+      "topic": "RAG",
+      "adoption_type": "all",
+      "source": "RAG design guidance"
+    }
+  ]
+}

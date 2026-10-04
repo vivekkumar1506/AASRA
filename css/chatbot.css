@@ -1,0 +1,236 @@
+/* =========================================================
+   AASRA - Yuganshi AI Chatbot
+   Frontend-only UI layer. Backend connection is in chatbot.js.
+   ========================================================= */
+
+:root {
+    --yuganshi-primary: #1769aa;
+    --yuganshi-primary-dark: #0d4f82;
+    --yuganshi-bg: #ffffff;
+    --yuganshi-light: #f5f8fb;
+    --yuganshi-text: #1f2937;
+    --yuganshi-muted: #6b7280;
+    --yuganshi-border: #e5e7eb;
+    --yuganshi-user: #1769aa;
+    --yuganshi-bot: #eef4f8;
+}
+
+.aasra-chat-launcher {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background: var(--yuganshi-primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0,0,0,.20);
+    z-index: 9999;
+    transition: transform .2s ease, background .2s ease;
+}
+.aasra-chat-launcher:hover {
+    transform: scale(1.06);
+    background: var(--yuganshi-primary-dark);
+}
+
+.aasra-chat-window {
+    position: fixed;
+    right: 24px;
+    bottom: 96px;
+    width: 380px;
+    height: 570px;
+    background: var(--yuganshi-bg);
+    border: 1px solid var(--yuganshi-border);
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(0,0,0,.20);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9998;
+    opacity: 0;
+    transform: translateY(20px) scale(.96);
+    pointer-events: none;
+    transition: opacity .2s ease, transform .2s ease;
+}
+.aasra-chat-window.open {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.aasra-chat-header {
+    background: var(--yuganshi-primary);
+    color: #fff;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.aasra-chat-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.aasra-chat-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--yuganshi-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.aasra-chat-title {
+    font-size: 16px;
+    font-weight: 700;
+}
+.aasra-chat-status {
+    font-size: 12px;
+    opacity: .9;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.aasra-status-dot {
+    width: 7px;
+    height: 7px;
+    background: #4ade80;
+    border-radius: 50%;
+}
+.aasra-chat-close {
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.aasra-chat-messages {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    background: var(--yuganshi-light);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.aasra-chat-message {
+    max-width: 82%;
+    padding: 10px 13px;
+    border-radius: 14px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+.aasra-chat-message.bot {
+    align-self: flex-start;
+    background: var(--yuganshi-bot);
+    color: var(--yuganshi-text);
+    border-bottom-left-radius: 4px;
+}
+.aasra-chat-message.user {
+    align-self: flex-end;
+    background: var(--yuganshi-user);
+    color: #fff;
+    border-bottom-right-radius: 4px;
+}
+
+.aasra-chat-quick {
+    padding: 0 16px 10px;
+    background: var(--yuganshi-light);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+.aasra-quick-btn {
+    border: 1px solid #cbd5e1;
+    background: #fff;
+    color: var(--yuganshi-text);
+    border-radius: 20px;
+    padding: 7px 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.aasra-quick-btn:hover {
+    border-color: var(--yuganshi-primary);
+    color: var(--yuganshi-primary);
+}
+
+.aasra-chat-input-area {
+    padding: 12px;
+    border-top: 1px solid var(--yuganshi-border);
+    background: #fff;
+    display: flex;
+    gap: 8px;
+}
+.aasra-chat-input {
+    flex: 1;
+    border: 1px solid var(--yuganshi-border);
+    border-radius: 22px;
+    padding: 10px 14px;
+    outline: none;
+    font-size: 14px;
+}
+.aasra-chat-input:focus {
+    border-color: var(--yuganshi-primary);
+}
+.aasra-chat-send {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: var(--yuganshi-primary);
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+}
+.aasra-chat-send:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+.aasra-typing {
+    display: flex;
+    gap: 4px;
+    padding: 10px 13px;
+    background: var(--yuganshi-bot);
+    border-radius: 14px;
+    width: fit-content;
+}
+.aasra-typing span {
+    width: 6px;
+    height: 6px;
+    background: #94a3b8;
+    border-radius: 50%;
+    animation: aasraTyping 1.2s infinite;
+}
+.aasra-typing span:nth-child(2) { animation-delay: .15s; }
+.aasra-typing span:nth-child(3) { animation-delay: .30s; }
+
+@keyframes aasraTyping {
+    0%,60%,100% { transform: translateY(0); }
+    30% { transform: translateY(-4px); }
+}
+
+@media (max-width: 600px) {
+    .aasra-chat-window {
+        right: 10px;
+        left: 10px;
+        bottom: 82px;
+        width: auto;
+        height: calc(100vh - 105px);
+        border-radius: 16px;
+    }
+    .aasra-chat-launcher {
+        right: 16px;
+        bottom: 16px;
+    }
+}

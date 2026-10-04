@@ -1,0 +1,50 @@
+{
+  "sources": [
+    {
+      "id": "cara_adoption_regulations_2022",
+      "name": "CARA Adoption Regulations, 2022",
+      "authority": "Central Adoption Resource Authority (CARA)",
+      "organization": "Ministry of Women & Child Development, Government of India",
+      "source_type": "official_regulation",
+      "url": "https://cara.wcd.gov.in/PDF/adoption_regulations_2022_2709.pdf",
+      "priority": 1,
+      "use_for": [
+        "adoption rules",
+        "eligibility",
+        "adoption procedure",
+        "documents",
+        "regulatory requirements"
+      ]
+    },
+    {
+      "id": "cara_official_faq",
+      "name": "CARA Official FAQs",
+      "authority": "Central Adoption Resource Authority (CARA)",
+      "organization": "Ministry of Women & Child Development, Government of India",
+      "source_type": "official_faq",
+      "url": "https://cara.wcd.gov.in/PDF/CARA%20FAQs%2002022024.pdf",
+      "priority": 2,
+      "use_for": [
+        "frequently asked questions",
+        "general adoption guidance",
+        "basic process information"
+      ]
+    },
+    {
+      "id": "cara_official_website",
+      "name": "CARA Official Website",
+      "authority": "Central Adoption Resource Authority (CARA)",
+      "organization": "Ministry of Women & Child Development, Government of India",
+      "source_type": "official_website",
+      "url": "https://cara.wcd.gov.in/",
+      "priority": 3,
+      "use_for": [
+        "current information",
+        "official announcements",
+        "official directories",
+        "contact information",
+        "latest public guidance"
+      ]
+    }
+  ]
+}
